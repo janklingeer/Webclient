@@ -2,6 +2,10 @@
 #define WEBCLIENT_H
 
 #include "ui_webclient.h"
+#include <QTcpSocket>
+#include <QDebug>
+#include <QAbstractSocket>
+
 
 class Webclient : public QWidget, private Ui::Webclient
 {
@@ -9,6 +13,20 @@ class Webclient : public QWidget, private Ui::Webclient
 
 public:
     explicit Webclient(QWidget *parent = nullptr);
+
+private slots:
+    void on_goBttn_clicked();
+
+private:
+    void printMsg(QString message, QColor color = QColor::fromRgb(0, 0, 0));
+    void onsConnected();
+    void onsReadyRead();
+
+private:
+    QTcpSocket* m_socket = nullptr;
+    QString m_address;
+    const char m_port = 80;
+
 };
 
 #endif // WEBCLIENT_H
