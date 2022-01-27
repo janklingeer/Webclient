@@ -18,9 +18,8 @@ private slots:
     void on_goBttn_clicked();
 
 private:
-    void printMsg(QString message, QColor color = QColor::fromRgb(0, 0, 0));
-    void onsConnected();
-    void onsReadyRead();
+    void onSConnected();
+    void onSReadyRead();
 
 private:
     QTcpSocket* m_socket = nullptr;
