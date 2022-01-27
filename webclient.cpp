@@ -42,5 +42,5 @@ void Webclient::on_goBttn_clicked()
         }
     }
     else
-        u_outputterminal->setText("Please enter an adress");
+        u_outputterminal->setText("Please enter an address");
 }
