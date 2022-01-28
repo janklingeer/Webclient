@@ -37,7 +37,7 @@ void Webclient::on_goBttn_clicked()
         m_socket->connectToHost(m_address, m_port);
         if(!m_socket->waitForConnected(3000))
         {
-            u_outputterminal->setText("Your session has timed out!");
+            u_outputterminal->setText("connect failed!");
             m_socket->reset();
         }
     }
