@@ -1,5 +1,4 @@
 #include "webclient.h"
-#include <thread>
 
 Webclient::Webclient(QWidget *parent) :
     QWidget(parent)
